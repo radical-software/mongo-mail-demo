@@ -14,16 +14,16 @@ setup(
     include_package_data=True,
     packages=find_packages(),
     install_requires = [
-        'mongo-mail-web==dev',
-        'mongo-mail-tools==dev',
-        'mongo-mail-server==dev',
+        'mongo-mail-web',
+        'mongo-mail-tools',
+        'mongo-mail-server',
         'supervisor',
         'gunicorn'
     ],
     dependency_links=[
-      'https://github.com/srault95/mongo-mail-web/tarball/master/#egg=mongo-mail-web-dev',
-      'https://github.com/srault95/mongo-mail-tools/tarball/master/#egg=mongo-mail-tools-dev',
-      'https://github.com/srault95/mongo-mail-server/tarball/master/#egg=mongo-mail-server-dev'
+      'https://github.com/srault95/mongo-mail-web/tarball/master/#egg=mongo-mail-web-0.1.1',
+      'https://github.com/srault95/mongo-mail-tools/tarball/master/#egg=mongo-mail-tools-0.1.0',
+      'https://github.com/srault95/mongo-mail-server/tarball/master/#egg=mongo-mail-server-0.1.0'
     ],      
     test_suite='nose.collector',
     tests_require=[
