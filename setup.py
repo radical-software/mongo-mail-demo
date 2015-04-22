@@ -16,10 +16,14 @@ setup(
     install_requires = [
         'mongo-mail-web==dev',
         'mongo-mail-tools==dev',
+        'mongo-mail-server==dev',
+        'supervisor',
+        'gunicorn'
     ],
     dependency_links=[
       'https://github.com/srault95/mongo-mail-web/tarball/master/#egg=mongo-mail-web-dev',
       'https://github.com/srault95/mongo-mail-tools/tarball/master/#egg=mongo-mail-tools-dev',
+      'https://github.com/srault95/mongo-mail-server/tarball/master/#egg=mongo-mail-server-dev'
     ],      
     test_suite='nose.collector',
     tests_require=[
