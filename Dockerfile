@@ -52,16 +52,15 @@ RUN curl -k -O https://bootstrap.pypa.io/get-pip.py && python get-pip.py && rm -
 
 #RUN pip install https://github.com/srault95/mongo-mail-tools/tarball/master
 #RUN pip install --process-dependency-links https://github.com/srault95/mongo-mail-web/tarball/master
-#RUN git clone https://github.com/srault95/mongo-mail-web.git && \
-#    cd mongo-mail-web && \
-#   python setup.py install 
+
+RUN pip install 'pymongo<3.0,>=2.8' \
+   https://github.com/MongoEngine/flask-mongoengine/tarball/master \
+   https://github.com/srault95/flanker/tarball/light_deps \
+   https://github.com/srault95/geoip-data/tarball/master
 
 ADD . /code/
 WORKDIR /code/
 RUN pip install --process-dependency-links .
-
-#RUN pip install https://github.com/srault95/mongo-mail-server/tarball/master
-#RUN pip install supervisor gunicorn
 
 RUN mkdir -p /data/db
 
