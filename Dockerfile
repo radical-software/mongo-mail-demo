@@ -13,7 +13,7 @@ ENV MMS_MONGODB_DATABASE message
 ENV MMS_MONGODB_COLLECTION message
 #ENV MMS_DEBUG 1
 
-ENV MMW_SETTINGS mongo_mail_web.settings.Demo
+ENV MMW_SETTINGS mongo_mail_web_demo.settings.Demo
 ENV MMW_MODE 1
 ENV MMW_MONGODB_URI mongodb://localhost/message
 ENV MMW_SUPERADMIN_EMAIL admin@example.net
