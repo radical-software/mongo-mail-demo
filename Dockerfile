@@ -18,6 +18,7 @@ ENV MMW_MODE 1
 ENV MMW_MONGODB_URI mongodb://localhost/message
 ENV MMW_SUPERADMIN_EMAIL admin@example.net
 ENV MMW_SUPERADMIN_PASSWORD password
+
 ENV MMW_DEMO_MMS_HOST 127.0.0.1
 ENV MMW_DEMO_MMS_PORT 14001
 
@@ -49,13 +50,21 @@ RUN curl -k -O https://bootstrap.pypa.io/ez_setup.py && python ez_setup.py --ins
 
 RUN curl -k -O https://bootstrap.pypa.io/get-pip.py && python get-pip.py && rm -f get-pip.py
 
-RUN git clone https://github.com/srault95/mongo-mail-web.git && \
-    cd mongo-mail-web && \
-    python setup.py install 
+RUN pip install https://github.com/srault95/mongo-mail-tools/tarball/master
 
-RUN pip install https://github.com/srault95/mongo-mail-server/tarball/master 
+RUN pip install --process-dependency-links https://github.com/srault95/mongo-mail-web/tarball/master
+
+#RUN git clone https://github.com/srault95/mongo-mail-web.git && \
+#    cd mongo-mail-web && \
+#   python setup.py install 
+
+RUN pip install https://github.com/srault95/mongo-mail-server/tarball/master
 
 RUN pip install supervisor gunicorn
+
+ADD . /code/
+WORKDIR /code/
+RUN pip install .
 
 RUN mkdir -p /data/db
 
