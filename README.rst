@@ -27,7 +27,7 @@ Run Demo
 
 .. code:: bash
 
-    $ git clone https://github.com/srault95/mongo-mail-demo.git
+    $ git clone https://github.com/radical-software/mongo-mail-demo.git
     
     $ cd mongo-mail-demo && docker build -t mongo-mail-demo .
     
@@ -40,5 +40,5 @@ Run Demo
     # For mongodb persist use -v /home/persist/mongo-mail-demo1/db:/data/db
 
 
-.. _`Mongo Mail Server`: https://github.com/srault95/mongo-mail-server
-.. _`Mongo Mail Web`: https://github.com/srault95/mongo-mail-web
+.. _`Mongo Mail Server`: https://github.com/radical-software/mongo-mail-server
+.. _`Mongo Mail Web`: https://github.com/radical-software/mongo-mail-web

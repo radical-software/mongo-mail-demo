@@ -50,8 +50,8 @@ RUN curl -k -O https://bootstrap.pypa.io/ez_setup.py && python ez_setup.py --ins
 
 RUN curl -k -O https://bootstrap.pypa.io/get-pip.py && python get-pip.py && rm -f get-pip.py
 
-#RUN pip install https://github.com/srault95/mongo-mail-tools/tarball/master
-#RUN pip install --process-dependency-links https://github.com/srault95/mongo-mail-web/tarball/master
+#RUN pip install https://github.com/radical-software/mongo-mail-tools/tarball/master
+#RUN pip install --process-dependency-links https://github.com/radical-software/mongo-mail-web/tarball/master
 
 RUN pip install 'pymongo<3.0,>=2.8' \
    https://github.com/MongoEngine/flask-mongoengine/tarball/master \

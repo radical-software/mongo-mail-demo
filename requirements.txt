@@ -1,5 +1,5 @@
-git+https://github.com/srault95/mongo-mail-web.git#egg=mongo-mail-web-dev
-git+https://github.com/srault95/mongo-mail-tools.git#egg=mongo-mail-tools-dev
-git+https://github.com/srault95/mongo-mail-server.git#egg=mongo-mail-server-dev
+git+https://github.com/radical-software/mongo-mail-web.git#egg=mongo-mail-web-dev
+git+https://github.com/radical-software/mongo-mail-tools.git#egg=mongo-mail-tools-dev
+git+https://github.com/radical-software/mongo-mail-server.git#egg=mongo-mail-server-dev
 supervisor
 gunicorn
